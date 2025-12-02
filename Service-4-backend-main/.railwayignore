@@ -1,0 +1,28 @@
+# Frontend files
+frontend/
+node_modules/
+package*.json
+vite.config.ts
+tailwind.config.js
+tsconfig.json
+index.html
+
+# Development files
+.gitignore
+README.md
+*.log
+
+# Docker files (not needed for Railway)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

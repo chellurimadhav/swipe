@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}GST Billing System - Home{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6">
+            <div class="text-center text-lg-start">
+                <h1 class="display-4 fw-bold text-primary mb-4">
+                    Complete GST Billing & Inventory Management
+                </h1>
+                <p class="lead mb-4">
+                    Streamline your business with our comprehensive GST billing and inventory management system. 
+                    Generate professional invoices, track inventory, and manage GST compliance effortlessly.
+                </p>
+                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+                    <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg px-4 me-sm-3">
+                        <i class="fas fa-user-plus"></i> Get Started Free
+                    </a>
+                    <a href="{{ url_for('auth.login') }}" class="btn btn-outline-primary btn-lg px-4">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=GST+Billing+System" 
+                     alt="GST Billing System" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Features Section -->
+    <div class="row mt-5 pt-5">
+        <div class="col-12 text-center mb-5">
+            <h2 class="fw-bold">Why Choose Our GST Billing System?</h2>
+            <p class="lead text-muted">Everything you need to manage your business efficiently</p>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-file-invoice fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="card-title">Professional Invoicing</h5>
+                    <p class="card-text">
+                        Generate GST-compliant invoices with automatic tax calculations. 
+                        Support for CGST, SGST, and IGST based on customer location.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-warehouse fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="card-title">Inventory Management</h5>
+                    <p class="card-text">
+                        Track stock levels, manage products with HSN codes, 
+                        and get alerts for low stock items.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-chart-bar fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="card-title">Business Reports</h5>
+                    <p class="card-text">
+                        Comprehensive reports including GSTR-1, GSTR-3B, 
+                        sales analytics, and inventory valuation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Key Features -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-0 shadow">
+                <div class="card-header">
+                    <h3 class="mb-0">Key Features</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Multi-user business accounts</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>GST-compliant invoice generation</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Customer management with GSTIN</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Product catalog with HSN codes</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Stock tracking and alerts</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>PDF invoice generation</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>GSTR-1 and GSTR-3B reports</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Sales and analytics dashboard</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Business insights and charts</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Secure data isolation per business</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CTA Section -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <div class="card border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="card-body text-white p-5">
+                    <h2 class="mb-3">Ready to Streamline Your Business?</h2>
+                    <p class="lead mb-4">Join thousands of businesses using our GST billing system</p>
+                    <a href="{{ url_for('auth.register') }}" class="btn btn-light btn-lg">
+                        <i class="fas fa-rocket"></i> Start Your Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

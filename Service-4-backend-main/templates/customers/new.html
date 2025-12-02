@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}Add Customer - GST Billing System{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Add New Customer</h5>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {{ form.hidden_tag() }}
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    {{ form.name.label(class="form-label") }}
+                                    {{ form.name(class="form-control", placeholder="Enter customer name") }}
+                                    {% if form.name.errors %}
+                                        <div class="text-danger small">
+                                            {% for error in form.name.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    {{ form.gstin.label(class="form-label") }}
+                                    {{ form.gstin(class="form-control", placeholder="Enter GSTIN (optional)") }}
+                                    {% if form.gstin.errors %}
+                                        <div class="text-danger small">
+                                            {% for error in form.gstin.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    {{ form.phone.label(class="form-label") }}
+                                    {{ form.phone(class="form-control", placeholder="Enter phone number") }}
+                                    {% if form.phone.errors %}
+                                        <div class="text-danger small">
+                                            {% for error in form.phone.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    {{ form.email.label(class="form-label") }}
+                                    {{ form.email(class="form-control", placeholder="Enter email address (optional)") }}
+                                    {% if form.email.errors %}
+                                        <div class="text-danger small">
+                                            {% for error in form.email.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            {{ form.billing_address.label(class="form-label") }}
+                            {{ form.billing_address(class="form-control", rows="3", placeholder="Enter billing address") }}
+                            {% if form.billing_address.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.billing_address.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="mb-3">
+                            {{ form.shipping_address.label(class="form-label") }}
+                            {{ form.shipping_address(class="form-control", rows="3", placeholder="Enter shipping address (optional)") }}
+                            {% if form.shipping_address.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.shipping_address.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    {{ form.state.label(class="form-label") }}
+                                    {{ form.state(class="form-select") }}
+                                    {% if form.state.errors %}
+                                        <div class="text-danger small">
+                                            {% for error in form.state.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    {{ form.pincode.label(class="form-label") }}
+                                    {{ form.pincode(class="form-control", placeholder="Enter 6-digit pincode") }}
+                                    {% if form.pincode.errors %}
+                                        <div class="text-danger small">
+                                            {% for error in form.pincode.errors %}
+                                                {{ error }}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ url_for('customer.index') }}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Back to Customers
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Save Customer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
